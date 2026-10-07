@@ -1,0 +1,1329 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 7%;
+
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d63384;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #d63384;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at top left, #ffd6e7, transparent 40%),
+        radial-gradient(circle at bottom right, #d9e8ff, transparent 40%),
+        #fff5fa;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 30px;
+}
+
+.welcome {
+    letter-spacing: 6px;
+    font-size: 15px;
+    color: #777;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 10vw, 110px);
+    margin: 15px 0;
+
+    background: linear-gradient(90deg, #d63384, #6f42c1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+    font-size: 23px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.main-button {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+    background: #d63384;
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    transform: translateY(-5px);
+}
+
+
+/* SECTIONS */
+
+.section {
+    padding: 100px 7%;
+    text-align: center;
+}
+
+.section-label {
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #d63384;
+}
+
+.section h2 {
+    font-size: 45px;
+    margin: 12px 0;
+    color: #6f42c1;
+}
+
+.description {
+    font-size: 18px;
+    color: #777;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+
+/* FAMILY CARDS */
+
+.family-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    margin-top: 50px;
+}
+
+.family-box {
+    width: 280px;
+
+    padding: 40px 25px;
+
+    border-radius: 25px;
+
+    background: white;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+
+    transition: 0.4s;
+}
+
+.family-box:hover {
+    transform: translateY(-12px);
+}
+
+.family-box span {
+    font-size: 50px;
+}
+
+.family-box h3 {
+    font-size: 25px;
+}
+
+.family-box p {
+    color: #777;
+}
+
+.family-box button {
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 25px;
+
+    background: #d63384;
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* BIRTHDAYS */
+
+.birthdays {
+    background: #fff5fa;
+}
+
+.event-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    margin-top: 45px;
+}
+
+.event {
+    width: 300px;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    background: white;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+
+    transition: 0.3s;
+}
+
+.event:hover {
+    transform: scale(1.04);
+}
+
+.event span {
+    font-size: 45px;
+}
+
+.event h3 {
+    font-size: 23px;
+}
+
+
+/* MEMORIES */
+
+.memories {
+    background: #faf7ff;
+}
+
+.memory-message {
+    max-width: 600px;
+
+    margin: 45px auto 0;
+
+    padding: 50px 30px;
+
+    border-radius: 30px;
+
+    background: white;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.memory-message span {
+    font-size: 50px;
+}
+
+
+/* FINAL MESSAGE */
+
+.final-message {
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background: linear-gradient(135deg, #ffe0ed, #e5dcff);
+}
+
+.final-message h2 {
+    font-size: 40px;
+}
+
+.final-message p {
+    font-size: 20px;
+    color: #555;
+}
+
+.hearts {
+    margin-top: 25px;
+    font-size: 30px;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #222;
+    color: white;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .section h2 {
+        font-size: 35px;
+    }
+
+    .tagline {
+        font-size: 18px;
+    }
+
+}
+/* FAMILY TREES */
+
+.family-trees {
+    padding: 100px 7%;
+    background: linear-gradient(135deg, #fff5fa, #f7f2ff);
+}
+
+.tree-container {
+    max-width: 1100px;
+    margin: 0 auto 70px;
+    padding: 45px 30px;
+    text-align: center;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+}
+
+.tree-container h2 {
+    font-size: 38px;
+    color: #6f42c1;
+    margin-bottom: 35px;
+}
+
+.tree-root {
+    display: inline-block;
+    padding: 18px 30px;
+    border-radius: 50px;
+    background: #ffe1ed;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tree-children {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 55px;
+}
+
+.branch {
+    width: 250px;
+    padding: 25px 20px;
+    border-radius: 22px;
+    background: #faf7ff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    transition: 0.3s ease;
+}
+
+.branch:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.couple {
+    color: #d63384;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.children {
+    margin-top: 15px;
+    color: #555;
+    line-height: 2;
+}
+
+.memory-note {
+    color: #777;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+
+/* MOBILE FAMILY TREE */
+
+@media (max-width: 700px) {
+
+    .family-trees {
+        padding: 70px 20px;
+    }
+
+    .tree-container {
+        padding: 35px 15px;
+    }
+
+    .tree-container h2 {
+        font-size: 30px;
+    }
+
+    .tree-root {
+        font-size: 15px;
+        padding: 15px 20px;
+    }
+
+    .branch {
+        width: 100%;
+        max-width: 320px;
+    }
+
+}
+/* BIRTHDAY & ANNIVERSARY CARDS */
+
+.birthday-grid,
+.anniversary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 45px auto 0;
+}
+
+.birthday-card,
+.anniversary-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    transition: 0.3s ease;
+}
+
+.birthday-card:hover,
+.anniversary-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.birthday-card h3 {
+    color: #6f42c1;
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.birthday-card p,
+.anniversary-card p {
+    color: #555;
+    line-height: 1.7;
+    margin: 8px 0;
+}
+
+.anniversary-card {
+    text-align: center;
+}
+
+.anniversary-card span {
+    font-size: 40px;
+}
+
+.anniversary-card h3 {
+    font-size: 20px;
+    color: #d63384;
+    line-height: 1.5;
+}
+
+.anniversaries {
+    background: #faf7ff;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .birthday-grid,
+    .anniversary-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* FAMILY TREE CONNECTING LINES */
+
+.tree-container {
+    position: relative;
+}
+
+.tree-root {
+    position: relative;
+    z-index: 2;
+}
+
+/* Line coming down from the parents */
+
+.tree-root::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 55px;
+    background: #d63384;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+}
+
+/* Space for the connecting line */
+
+.tree-children {
+    position: relative;
+    padding-top: 25px;
+}
+
+/* Horizontal family line */
+
+.tree-children::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 3px;
+    background: #d63384;
+}
+
+/* Vertical line above each child */
+
+.branch {
+    position: relative;
+}
+
+.branch::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 25px;
+    background: #d63384;
+    left: 50%;
+    top: -25px;
+    transform: translateX(-50%);
+}
+/* BEAUTIFUL FAMILY TREE ANIMATION */
+
+.tree-container {
+    animation: fadeUp 0.8s ease both;
+}
+
+.branch {
+    animation: fadeUp 0.7s ease both;
+}
+
+.branch:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.branch:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.branch:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.branch:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.branch:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.branch:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HEART GLOW */
+
+.couple {
+    transition: 0.3s ease;
+}
+
+.couple:hover {
+    transform: scale(1.05);
+}
+
+/* ROOT FAMILY GLOW */
+
+.tree-root {
+    transition: 0.3s ease;
+}
+
+.tree-root:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 30px rgba(214, 51, 132, 0.2);
+}
+/* SPECIAL DAY */
+
+.special-day {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #fff0f6, #f4edff);
+}
+
+.special-box {
+    max-width: 800px;
+    margin: auto;
+    padding: 50px 30px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+}
+
+.special-icon {
+    font-size: 55px;
+    animation: celebrate 1.5s infinite;
+}
+
+.special-box h2 {
+    color: #d63384;
+    font-size: 35px;
+    margin: 15px 0;
+}
+
+.special-box p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+@keyframes celebrate {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+}
+/* CONFETTI */
+
+.confetti {
+    position: fixed;
+    top: -15px;
+    width: 10px;
+    height: 15px;
+    z-index: 9999;
+    pointer-events: none;
+    animation: fall 5s linear forwards;
+}
+
+@keyframes fall {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+
+}
+/* SMOOTH PAGE SCROLL */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAVIGATION HOVER EFFECT */
+
+nav a {
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+}
+/* MEMORY CARDS */
+
+.memories {
+    background: linear-gradient(135deg, #fff5fa, #f7f2ff);
+}
+
+.memory-grid {
+    max-width: 1100px;
+    margin: 45px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.memory-card {
+    background: white;
+    padding: 40px 25px;
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    transition: 0.3s ease;
+}
+
+.memory-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.memory-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.memory-card h3 {
+    color: #6f42c1;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.memory-card p {
+    color: #666;
+    line-height: 1.6;
+}
+/* MAIN FAMILY CARDS */
+
+.family-grid {
+    max-width: 1100px;
+    margin: 45px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.family-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.family-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.13);
+}
+
+.family-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.family-card h3 {
+    color: #6f42c1;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.family-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.family-card a {
+    display: inline-block;
+    margin-top: 18px;
+    color: #d63384;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.family-card a:hover {
+    text-decoration: underline;
+}
+/* FAMILY MEMBER CARDS */
+
+.member-section {
+    margin-top: 60px;
+}
+
+.member-section h3 {
+    color: #6f42c1;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.member-card {
+    background: #fff;
+    padding: 25px 18px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    transition: 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-7px);
+}
+
+.member-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.member-card h4 {
+    color: #d63384;
+    font-size: 20px;
+    margin: 8px 0 12px;
+}
+
+.member-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+/* IN LOVING MEMORY */
+
+.memory-card-member {
+    background: #f5f5f5;
+}
+
+.memory-card-member h4 {
+    color: #777;
+}
+
+.memory-card-member p {
+    color: #777;
+}
+/* =================================
+   MOBILE FRIENDLY DESIGN
+   ================================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 12px 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 13px;
+        margin: 5px 7px;
+    }
+
+    .hero {
+        min-height: 85vh;
+        padding: 80px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .hero-tagline {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .family-grid,
+    .member-grid,
+    .birthday-grid,
+    .anniversary-grid,
+    .memory-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .family-card,
+    .member-card,
+    .birthday-card,
+    .anniversary-card,
+    .memory-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .tree-container {
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .tree-children {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .branch {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .special-box {
+        padding: 35px 20px;
+    }
+
+    .special-box h2 {
+        font-size: 28px;
+    }
+
+}
+/* =================================
+   PREMIUM FAMILY CARDS
+   ================================= */
+
+.family-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.family-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #ff4d8d, #7b61ff);
+    transition: 0.5s ease;
+}
+
+.family-card:hover::before {
+    left: 0;
+}
+
+.family-card .family-icon {
+    transition: 0.4s ease;
+}
+
+.family-card:hover .family-icon {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.family-card a {
+    padding: 10px 18px;
+    border-radius: 20px;
+    background: #fff0f6;
+    transition: 0.3s ease;
+}
+
+.family-card a:hover {
+    background: #d63384;
+    color: white;
+    text-decoration: none;
+}
+/* =================================
+   BEAUTIFUL FAMILY TREE
+   ================================= */
+
+.tree-container {
+    border: 2px solid rgba(214, 51, 132, 0.08);
+    overflow: hidden;
+}
+
+.tree-root {
+    background: linear-gradient(135deg, #ffe1ed, #f0e5ff);
+    border: 2px solid rgba(214, 51, 132, 0.12);
+}
+
+.branch {
+    border: 1px solid rgba(111, 66, 193, 0.08);
+}
+
+.branch:hover {
+    border-color: rgba(214, 51, 132, 0.25);
+}
+
+.couple {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 15px;
+    background: #fff0f6;
+}
+
+.children {
+    background: #f8f6ff;
+    padding: 10px 12px;
+    border-radius: 15px;
+}
+
+.children strong {
+    color: #6f42c1;
+}
+
+/* Mobile tree improvement */
+@media (max-width: 700px) {
+
+    .tree-root::after {
+        height: 30px;
+    }
+
+    .tree-children {
+        padding-top: 15px;
+    }
+
+    .tree-children::before {
+        display: none;
+    }
+
+    .branch::before {
+        height: 15px;
+        top: -15px;
+    }
+
+}
+/* =================================
+   BEAUTIFUL BIRTHDAY CARDS
+   ================================= */
+
+.birthday-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.birthday-card::before {
+    content: "🎂";
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    font-size: 28px;
+    opacity: 0.8;
+}
+
+.birthday-card h3 {
+    padding-right: 40px;
+}
+
+.birthday-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.birthday-card p:first-of-type {
+    font-weight: bold;
+    color: #d63384;
+}
+
+.birthday-card p:last-of-type {
+    color: #777;
+}
+
+/* Birthday section title */
+
+.birthdays {
+    background: linear-gradient(135deg, #fff8fb, #f8f4ff);
+}
+
+/* Mobile birthday cards */
+
+@media (max-width: 700px) {
+
+    .birthday-card {
+        padding: 25px 20px;
+    }
+
+    .birthday-card h3 {
+        font-size: 21px;
+    }
+
+}
+/* =================================
+   BEAUTIFUL ANNIVERSARY CARDS
+   ================================= */
+
+.anniversary-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(214, 51, 132, 0.08);
+}
+
+.anniversary-card::before {
+    content: "💍";
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    font-size: 28px;
+    opacity: 0.8;
+}
+
+.anniversary-card span {
+    display: block;
+    margin-bottom: 10px;
+    transition: 0.4s ease;
+}
+
+.anniversary-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.anniversary-card:hover span {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+.anniversary-card h3 {
+    margin-top: 10px;
+}
+
+.anniversary-card p {
+    font-weight: bold;
+    color: #777;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .anniversary-card {
+        padding: 28px 20px;
+    }
+
+    .anniversary-card h3 {
+        font-size: 19px;
+    }
+
+}
+/* =================================
+   SPECIAL FAMILY DAY
+   ================================= */
+
+.special-day {
+    position: relative;
+    overflow: hidden;
+}
+
+.special-box {
+    position: relative;
+    border: 2px solid rgba(214, 51, 132, 0.12);
+    transition: 0.4s ease;
+}
+
+.special-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(214, 51, 132, 0.15);
+}
+
+.special-icon {
+    display: inline-block;
+    filter: drop-shadow(0 5px 10px rgba(214, 51, 132, 0.2));
+}
+
+.special-box strong {
+    color: #d63384;
+}
+
+.special-box p {
+    font-size: 19px;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .special-box {
+        padding: 35px 18px;
+    }
+
+    .special-box h2 {
+        font-size: 27px;
+    }
+
+    .special-box p {
+        font-size: 16px;
+    }
+
+}
+/* =================================
+   FAMILY MEMORIES
+   ================================= */
+
+.memories {
+    position: relative;
+    overflow: hidden;
+}
+
+.memory-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(111, 66, 193, 0.08);
+}
+
+.memory-card::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(214, 51, 132, 0.06);
+    top: -50px;
+    right: -50px;
+}
+
+.memory-icon {
+    display: inline-block;
+    transition: 0.4s ease;
+}
+
+.memory-card:hover .memory-icon {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.memory-card h3 {
+    position: relative;
+    z-index: 1;
+}
+
+.memory-card p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .memory-card {
+        padding: 35px 20px;
+    }
+
+}
+/* =================================
+   FINAL FAMILY MESSAGE
+   ================================= */
+
+.final-message {
+    padding: 110px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #fff0f6, #f0eaff);
+    position: relative;
+    overflow: hidden;
+}
+
+.final-message h2 {
+    font-size: 45px;
+    color: #d63384;
+    margin-bottom: 20px;
+}
+
+.final-message p {
+    max-width: 700px;
+    margin: auto;
+    color: #666;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.final-heart {
+    font-size: 60px;
+    display: inline-block;
+    margin-bottom: 15px;
+    animation: heartBeat 1.5s infinite;
+}
+
+@keyframes heartBeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .final-message {
+        padding: 80px 20px;
+    }
+
+    .final-message h2 {
+        font-size: 34px;
+    }
+
+    .final-message p {
+        font-size: 16px;
+    }
+
+}
